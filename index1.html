@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sekolah - SMAN 1 Parungkuda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .logo {
+            height: 40px; 
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Tombol Logout */
+        .logout-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logout-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+
+    <script>
+        // Cek apakah user sudah login, jika belum arahkan ke login.html
+        if (!localStorage.getItem("loggedInUser")) {
+            window.location.href = "login.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>SMAN 1 Parungkuda</h1>
+        <p>Mardi Bangsa Chata Wijaya</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <img src="https://raw.githubusercontent.com/najlaeymi/logosma-image-resouurces/2ccdb8f353dfb31472b59381a24de8af90c11d5e/download%20(4).jpg" alt="Logo Kiri" class="logo">
+            </li>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index2.html">Profil</a></li>
+            <li><a href="index6.html">Fasilitas</a></li>
+            <li><a href="index3.html">Ekstrakurikuler</a></li>
+            <li><a href="index4.html">Guru</a></li>
+            <li><a href="index5.html">Profil Pembuat</a></li>
+            <li>
+                <img src="https://raw.githubusercontent.com/najlaeymi/logosma-image-resouurces/2ccdb8f353dfb31472b59381a24de8af90c11d5e/download%20(4).jpg" alt="Logo Kanan" class="logo">
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="welcome">
+            <h2>Selamat Datang di Website SMAN 1 Parungkuda</h2>
+            <p>SMAN 1 Parungkuda adalah sekolah yang berkomitmen dalam mencetak generasi unggul.</p>
+        </section>
+
+        <section class="news">
+            <h2>Berita Terbaru</h2>
+            <article>
+                <h3>Siswa SMAN 1 Parungkuda Banyak yang Diterima Di PTN Pada 2024</h3>
+                <a href="https://republikan.co/2024/05/30/sman-1-parungkuda-luluskan-411-siswa-banyak-yang-berprestasi-dan-diterima-di-perguruan-tinggi-ternama/">SMAN 1 Parungkuda Luluskan 411 Siswa, Banyak yang Berprestasi dan Diterima di Perguruan Tinggi...</a>
+            </article>
+        </section>
+
+        <section class="contact">
+            <h2>Alamat & Kontak SMAN 1 Parungkuda</h2>
+            <p>Jln. Raya Parungkuda. Km. 24 Kab.Sukabumi</p>
+            <p>Telp./Faks (0266)531580</p>
+            <p>E-mail: smanprkuda@yahoo.co.id</p>
+            <p>smanlparungkuda.sch.id</p>
+        </section>
+
+        <div class="logout-container">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SMAN 1 Parungkuda | Semua Hak Dilindungi</p>
+    </footer>
+</body>
+</html>
